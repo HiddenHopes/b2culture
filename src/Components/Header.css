@@ -1,0 +1,45 @@
+.header {
+    display: block;
+    border-bottom: 1px solid #37a0e8;
+    height: 70px;
+}
+
+img {
+    height: 45px;
+    margin-left: 50%;
+}
+
+ul {
+    background-color: #37a0e8;
+    border-top-left-radius: 5px;
+    margin-bottom: 0;
+    height: 100%;
+}
+
+a {
+    display: inline;
+}
+
+li {
+    display: inline;
+}
+
+.row .topbar{
+    height: 35px;
+}
+
+.row .menubar{
+    height: 35px;
+}
+.menu-btn {
+    padding: 29px 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font: 600 13px/8px var(--font-poppins);
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+}
