@@ -1,14 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import ImageCarousel from './Components/ImageCarousel';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className='row'>
+            <div className='col-lg-4'>
+              <ImageCarousel/>
+            </div>
+            <div className='col-lg-4'></div>
+        </div>
       </header>
     </div>
   );
