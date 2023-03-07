@@ -1,7 +1,12 @@
 import './Header.css';
-import b2 from '../b2.png';
+import b2 from '../../images/b2.png';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import LanguageSwitcher from '../../Translations/LanguageSwitcher';
+import { useTranslation } from 'react-i18next';
 
 function Header() {
+    const {t} = useTranslation();
     return(
         <div className='header'>
             <div className="row">
@@ -10,7 +15,7 @@ function Header() {
                 </div>
                 <div className='col-sm-9'>
                     <div className='row topbar'>
-                        <div className='col-lg-6'>
+                        <div className='col-lg-5'>
                             <a className="social_icon" href="#%20" target="_blank">
                                 <i className="fab fa-instagram align-middle"></i>
                             </a>
@@ -21,22 +26,23 @@ function Header() {
                                 <i className="fab fa-twitter align-middle"></i>
                             </a>
                         </div>
-                        <div className='col-lg-6'>
+                        <div className='col-lg-5'>
                             <a className="social_icon login-btn" href="#%20" target="_blank">
                                 <i className='fas fa-sign-in-alt me-2'></i>
                                 Log in
                             </a>
                         </div>
+                        <div className='col-lg-2'>
+                            <LanguageSwitcher/>
+                        </div>
                     </div>
                     <div className='row menubar'>
                         <div className='col-sm-7'>
                             <ul className="menu">
-                                <li className="menu-btn">Home</li>
-                                <li className="menu-btn">Literature</li>
-                                <li className="menu-btn">Books</li>
-                                <li className="menu-btn">Students</li>
-                                <li className="menu-btn">About Us</li>
-                                <li className="menu-btn">Contact</li>
+                                <li><Link to="/" className='menu-btn'>{t('home')}</Link></li>
+                                <li><Link to="/services" className='menu-btn'>{t('service_title')}</Link></li>
+                                <li><Link to="/contact" className='menu-btn'>{t('contact_title')}</Link></li>
+                                <li><Link to="/about" className='menu-btn'>{t('about_title')}</Link></li>
                             </ul>
                         </div>
                         <div className='col-sm-4'>

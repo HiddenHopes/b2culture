@@ -3,15 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
+import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
+import { BrowserRouter } from "react-router-dom";
+import i18n from './i18n';
+import { I18nextProvider } from 'react-i18next';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header/>
-    <App />
-    <Footer/>
+    <BrowserRouter>
+      <Header/>
+      <App />
+      <Footer/>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
